@@ -1,0 +1,22 @@
+{
+  "name": "twitter",
+  "version": "1.0.0",
+  "description": "Sprint 1: Add modules",
+  "main": "index.js",
+  "scripts": {
+    "test":  "node ./node_modules/jest/bin/jest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julietadelgado/twitter.git"
+  },
+  "author": "Julieta Delgado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julietadelgado/twitter/issues"
+  },
+  "homepage": "https://github.com/julietadelgado/twitter#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
