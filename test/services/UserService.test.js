@@ -1,3 +1,5 @@
+const UserService = require('./../../app/services/UserService')
+
 describe('Test for UserService', () => {
     // Requerimiento 1: Crear un nuevo usuario con lo ya definido en el sprint anterior, usando una nueva clase llamada `UserService`.
     // Criterios de aceptación:
@@ -5,7 +7,7 @@ describe('Test for UserService', () => {
     // 2. El valor de `bio` deberá ser por default para todos los `user` creados.
 
     test('Create a new user using the UserService', () => {
-        const user = new UserService(1, 'julietadelgado', 'Julieta Delgado')
+        const user = UserService.create(1, 'julietadelgado', 'Julieta Delgado')
         expect(user.id).toBe(1)
         expect(user.username).toBe('julietadelgado')
         expect(user.name).toBe('Julieta Delgado')
