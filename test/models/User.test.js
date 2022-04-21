@@ -10,4 +10,13 @@ describe('Unit test for User Class', () => {
         expect(user.dateCreated).not.toBeUndefined()
         expect(user.lastUpdated).not.toBeUndefined()
     })
+    test('2. Add Getters', () => {
+        const user = new User(1, 'julietadelgado', 'Julieta Delgado', 'Bio')
+        expect(user.getUsername).not.toBeUndefined()
+        expect(user.getBio).not.toBeUndefined()
+        expect(user.getDateCreated).not.toBeUndefined()
+        expect(user.getLastUpdated).not.toBeUndefined()
+        expect(user.dateCreated).not.toBeUndefined()
+        expect(user.lastUpdated).not.toBeUndefined()
+    })
 })
