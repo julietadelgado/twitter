@@ -26,10 +26,23 @@ describe('Test for UserService', () => {
     })
 
     //Requerimiento 3: Agregar un nuevo método estático en `UserService` llamado `updateUserUsername`, que reciba un objeto de la clase `User` y un nuevo string, que actualizará el valor de `username`. 
-    test('2. Update username', () => {
+    test('3. Update username', () => {
         const user = UserService.create(1, 'julietadelgado', 'Julieta Delgado')
         UserService.updateUserUsername(user,'juls__dem')
         expect(user.username).toBe('juls__dem')
+
+    })
+
+    //Requerimiento 4: Agregar un nuevo método estático en `UserService` llamado `getAllUsernames`, que recibirá una lista de objetos de la clase `User`, y regresará la lista de todos los usernames de dichos objetos. 
+    test('4. Given a list of user objects return usernames list', () => {
+        const user1 = UserService.create(1, 'julietadelgado', 'Julieta Delgado')
+        const user2 = UserService.create(2, 'julietadelgado_2', 'Julieta Delgado')
+        const user3 = UserService.create(3, 'julietadelgado_3', 'Julieta Delgado')
+        
+        const userNamesList = UserService.getAllUsernames([user1, user2, user3])
+        expect(userNamesList).toContain('julietadelgado')
+        expect(userNamesList).toContain('julietadelgado_2')
+        expect(userNamesList).toContain('julietadelgado_3')
 
     })
 })
