@@ -5,7 +5,7 @@ class UserService {
     }
 
     static getInfo(user){
-        return [user.id,user.username, user.name, user.bio]
+        return Object.values(user)
     }
 }
 
