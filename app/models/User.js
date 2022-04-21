@@ -23,15 +23,6 @@ class User {
     get getLastUpdated(){
         return this.lastUpdated
     }
-
-    get getDateCreated(){
-        return this.dateCreated
-    }
-
-    get getLastUpdated(){
-        return this.lastUpdated
-    }
-
 }
 
 module.exports = User
