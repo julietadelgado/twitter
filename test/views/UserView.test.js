@@ -29,7 +29,7 @@ describe('Test for UserView', () => {
     // 4. Verifica que se pueda crear un objeto `User`, al enviar un payload con las siguientes 
     // propiedades: `username`, `id` y `name`.
     test('4. Create User object', () => {
-        const payload = {username: 'julietadelgado', id: 1, name: 'Julieta Delgado'}
+        const payload = {username: 'julietadelgado', id: 1, name: null}
         const result = UserView.createUser(payload)
         expect(result.username).toBe('julietadelgado')
         expect(result.id).toBe(1)
