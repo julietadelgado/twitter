@@ -9,4 +9,13 @@ describe('Test for UserView', () => {
         const result = UserView.createUser(payload)
         expect(result.error).toMatch(/payload no existe/)
     })
+
+    // Requerimiento 2. 2. Valida que un `payload` contenga en alguna de las llaves 
+    // `username`, `name`, o `id` un valor en `null`. Si hay un valor `null` 
+    //regresa un objeto con la llave `error` y que indique el texto: `necesitan tener un valor válido`.
+    test('2. Validate if payload has username, name or id, if theres a null value retur an error object', () => {
+        const payload = {username: null, name: null, id: null}
+        const result = UserView.createUser(payload)
+        expect(result.error).toMatch(/payload no existe/)
+    })
 })
