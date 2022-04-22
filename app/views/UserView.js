@@ -1,7 +1,7 @@
 class UserView {
     static createUser(payload){
         if(payload == null){
-            return "payload no existe"
+            return {error: "payload no existe"} 
         }
     }
 }
